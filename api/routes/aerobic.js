@@ -20,5 +20,19 @@ router.get('/:aerobicId', (req, res, next) => {
     });
 });
 
+router.patch('/:aerobicId', (req, res, next) => {
+    const aerobicId = req.params.aerobicId;
+    res.status(200).json({
+        message: 'Handling PATCH requests to ' + aerobicId
+    });
+});
+
+router.delete('/:aerobicId', (req, res, next) => {
+    const aerobicId = req.params.aerobicId;
+    res.status(200).json({
+        message: 'Handling DELETE requests to ' + aerobicId
+    });
+});
+
 
 module.exports = router;
