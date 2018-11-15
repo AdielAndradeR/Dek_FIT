@@ -1,0 +1,14 @@
+{
+  "name": "dek_fit",
+  "version": "1.0.0",
+  "description": "it's a sistem that make easy go along my progress in gym",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adiel Andrade",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
