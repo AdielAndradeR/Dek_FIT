@@ -4,12 +4,16 @@ const morgan = require('morgan');
 
 const training = require('./api/routes/training');
 const aerobic = require('./api/routes/aerobic');
+const muscle = require('./api/routes/muscle');
+const user = require('./api/routes/user');
 
 app.use(morgan('dev'));
 
 
 app.use('/training' , training);
 app.use('/aerobic' , aerobic);
+app.use('/muscle' , muscle);
+app.use('/user' , user);
 
 //handling errors
 
