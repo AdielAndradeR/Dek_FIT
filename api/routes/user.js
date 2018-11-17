@@ -3,8 +3,14 @@ const router = express.Router();
 
 //create user
 router.post('/', (req, res, next) => {
+    const user = {
+        name: req.body.name,
+        age: req.body.age,
+        type: req.body.type
+    };
     res.status(200).json({
-        message: 'Handling POST requests to /user'
+        message: 'Handling POST requests to /user',
+        user
     });
 });
 
