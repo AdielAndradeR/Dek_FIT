@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+
+
+const Aerobic = require('../models/aerobic');
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
@@ -8,7 +12,19 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    res.status(200).json({
+    const aerobic =new Aerobic({
+        _id: new mongoose.Types.ObjectId,
+        name: req.body.name,
+        time: req.body.time
+    })
+    aerobic.save()
+    .then(result => {
+        console.log(result);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+    res.status(201).json({
         message: 'Handling POST requests to /aerobic'
     });
 });

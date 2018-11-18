@@ -16,7 +16,7 @@ router.post('/', (req, res, next) => {
 router.get('/:trainingID', (req, res, next) => {
     const trainingID = req.params.trainingID;
     res.status(200).json({
-        message: 'Handling GEt requests to ' + trainingID
+        message: 'Handling GEt requests  to ' + trainingID
     });
 });
 
